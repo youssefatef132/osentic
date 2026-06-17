@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSCENTIC — The Art of Scent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" alt="OSCENTIC iris emblem" />
+      <span class="nav-logo-text">OSCENTIC</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#collection" class="nav-link">Collection</a>
+      <a href="#atelier" class="nav-link">Our Story</a>
+      <a href="#scent-finder" class="nav-link">Scent Finder</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="cart-btn" id="cart-open-btn" aria-label="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <button class="menu-btn" id="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+        <svg id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <a href="#collection" class="nav-link" onclick="closeMobileMenu()">Collection</a>
+      <a href="#atelier" class="nav-link" onclick="closeMobileMenu()">Our Story</a>
+      <a href="#scent-finder" class="nav-link" onclick="closeMobileMenu()">Scent Finder</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════ HERO -->
+<section id="hero">
+  <!-- Wireframe decorative shapes -->
+  <div class="wireframe-shapes" aria-hidden="true">
+    <!-- Octahedron 1 -->
+    <div class="wireframe-shape" style="left:8%;top:12%;opacity:.7;animation:float 6s ease-in-out infinite">
+      <svg width="76" height="76" viewBox="-38 -38 76 76" fill="none">
+        <line x1="0" y1="-26.6" x2="38" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="-26.6" x2="-38" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="-26.6" x2="0" y2="22.8" stroke="#c9a84c" stroke-width=".8" opacity=".5"/>
+        <line x1="0" y1="-26.6" x2="0" y2="-22.8" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="38" y1="0" x2="0" y2="22.8" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="38" y1="0" x2="0" y2="-22.8" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="-38" y1="0" x2="0" y2="22.8" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="-38" y1="0" x2="0" y2="-22.8" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="26.6" x2="38" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="26.6" x2="-38" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="26.6" x2="0" y2="22.8" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="26.6" x2="0" y2="-22.8" stroke="#c9a84c" stroke-width=".8" opacity=".5"/>
+      </svg>
+    </div>
+    <!-- Icosahedron 2 -->
+    <div class="wireframe-shape" style="left:82%;top:10%;opacity:.65;animation:float 9s ease-in-out infinite;animation-delay:1.5s">
+      <svg width="97" height="97" viewBox="-48.4 -48.4 96.8 96.8" fill="none">
+        <polygon points="0,-44 41.8,-13.2 25.96,35.2 -25.96,35.2 -41.8,-13.2" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".9"/>
+        <polygon points="0,-19.8 18.92,-5.94 11.88,15.84 -11.88,15.84 -18.92,-5.94" stroke="#c9a84c" stroke-width=".9" fill="none" opacity=".6"/>
+        <line x1="0" y1="-44" x2="0" y2="-19.8" stroke="#c9a84c" stroke-width=".8" opacity=".6"/>
+        <line x1="41.8" y1="-13.2" x2="18.92" y2="-5.94" stroke="#c9a84c" stroke-width=".8" opacity=".6"/>
+        <line x1="25.96" y1="35.2" x2="11.88" y2="15.84" stroke="#c9a84c" stroke-width=".8" opacity=".6"/>
+        <line x1="-25.96" y1="35.2" x2="-11.88" y2="15.84" stroke="#c9a84c" stroke-width=".8" opacity=".6"/>
+        <line x1="-41.8" y1="-13.2" x2="-18.92" y2="-5.94" stroke="#c9a84c" stroke-width=".8" opacity=".6"/>
+      </svg>
+    </div>
+    <!-- Diamond 3 -->
+    <div class="wireframe-shape" style="left:5%;top:65%;opacity:.6;animation:float 7s ease-in-out infinite;animation-delay:3s">
+      <svg width="64" height="76.8" viewBox="-32 -38.4 64 76.8" fill="none">
+        <line x1="0" y1="-38.4" x2="-32" y2="-9.6" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="-38.4" x2="32" y2="-9.6" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="-38.4" x2="-12.8" y2="-9.6" stroke="#b8960c" stroke-width=".9" opacity=".7"/>
+        <line x1="0" y1="-38.4" x2="12.8" y2="-9.6" stroke="#b8960c" stroke-width=".9" opacity=".7"/>
+        <line x1="-32" y1="-9.6" x2="-12.8" y2="-9.6" stroke="#b8960c" stroke-width="1" opacity=".8"/>
+        <line x1="-12.8" y1="-9.6" x2="12.8" y2="-9.6" stroke="#b8960c" stroke-width="1" opacity=".8"/>
+        <line x1="12.8" y1="-9.6" x2="32" y2="-9.6" stroke="#b8960c" stroke-width="1" opacity=".8"/>
+        <line x1="-32" y1="-9.6" x2="0" y2="32" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="32" y1="-9.6" x2="0" y2="32" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="-12.8" y1="-9.6" x2="0" y2="32" stroke="#b8960c" stroke-width=".8" opacity=".6"/>
+        <line x1="12.8" y1="-9.6" x2="0" y2="32" stroke="#b8960c" stroke-width=".8" opacity=".6"/>
+      </svg>
+    </div>
+    <!-- Octahedron 4 -->
+    <div class="wireframe-shape" style="left:88%;top:62%;opacity:.65;animation:float 8s ease-in-out infinite;animation-delay:2s">
+      <svg width="72" height="72" viewBox="-36 -36 72 72" fill="none">
+        <line x1="0" y1="-25.2" x2="36" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="-25.2" x2="-36" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="36" y1="0" x2="0" y2="21.6" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="-36" y1="0" x2="0" y2="21.6" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="25.2" x2="36" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="25.2" x2="-36" y2="0" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="36" y1="0" x2="0" y2="-21.6" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+        <line x1="-36" y1="0" x2="0" y2="-21.6" stroke="#c9a84c" stroke-width="1.2" opacity=".9"/>
+      </svg>
+    </div>
+    <!-- Icosahedron 5 -->
+    <div class="wireframe-shape" style="left:75%;top:78%;opacity:.5;animation:float 10s ease-in-out infinite;animation-delay:4s">
+      <svg width="62" height="62" viewBox="-30.8 -30.8 61.6 61.6" fill="none">
+        <polygon points="0,-28 26.6,-8.4 16.52,22.4 -16.52,22.4 -26.6,-8.4" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".9"/>
+        <polygon points="0,-12.6 12.04,-3.78 7.56,10.08 -7.56,10.08 -12.04,-3.78" stroke="#c9a84c" stroke-width=".9" fill="none" opacity=".6"/>
+      </svg>
+    </div>
+    <!-- Diamond 6 -->
+    <div class="wireframe-shape" style="left:15%;top:82%;opacity:.55;animation:float 11s ease-in-out infinite;animation-delay:1s">
+      <svg width="60" height="72" viewBox="-30 -36 60 72" fill="none">
+        <line x1="0" y1="-36" x2="-30" y2="-9" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="0" y1="-36" x2="30" y2="-9" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="-30" y1="-9" x2="30" y2="-9" stroke="#b8960c" stroke-width="1" opacity=".8"/>
+        <line x1="-30" y1="-9" x2="0" y2="30" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+        <line x1="30" y1="-9" x2="0" y2="30" stroke="#b8960c" stroke-width="1.2" opacity=".9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-layout">
+
+      <!-- Text -->
+      <div class="hero-text" id="hero-text">
+        <p class="hero-eyebrow">Est. MMXXIV — Paris</p>
+        <h1>
+          <span class="hero-title-brand">OSCENTIC</span>
+          <span class="hero-title-sub">The Art of Scent</span>
+        </h1>
+        <div class="divider-gold"></div>
+        <p class="hero-desc">
+          Where ancient botanical alchemy meets contemporary luxury.
+          Each fragrance is an intimate story — crafted from the world's
+          most coveted essences in our Parisian atelier.
+        </p>
+        <div class="hero-ctas">
+          <button class="btn-gold-solid" id="hero-discover-btn">
+            <span style="display:flex;align-items:center;gap:12px">
+              Discover the Collection
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </span>
+          </button>
+          <a href="#scent-finder" class="btn-gold"><span>Find Your Scent</span></a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value gold-text">12</div>
+            <div class="hero-stat-label">Bespoke Fragrances</div>
+          </div>
+          <div>
+            <div class="hero-stat-value gold-text">47</div>
+            <div class="hero-stat-label">Rare Botanicals</div>
+          </div>
+          <div>
+            <div class="hero-stat-value gold-text">8</div>
+            <div class="hero-stat-label">Years of Craft</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottle -->
+      <div class="hero-bottle" id="hero-bottle">
+        <div class="bottle-wrap">
+          <div class="bottle-glow" aria-hidden="true"></div>
+          <div class="bottle-float">
+            <!-- PerfumeBottle SVG -->
+            <svg width="220" height="380" viewBox="0 0 220 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="liquidGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e8c97a" stop-opacity=".85"/>
+                  <stop offset="40%" stop-color="#d4a843" stop-opacity=".9"/>
+                  <stop offset="80%" stop-color="#c4922a" stop-opacity=".88"/>
+                  <stop offset="100%" stop-color="#b37f1a" stop-opacity=".82"/>
+                </linearGradient>
+                <linearGradient id="glassOverlay" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="white" stop-opacity=".35"/>
+                  <stop offset="30%" stop-color="white" stop-opacity=".08"/>
+                  <stop offset="70%" stop-color="white" stop-opacity=".04"/>
+                  <stop offset="100%" stop-color="white" stop-opacity=".18"/>
+                </linearGradient>
+                <linearGradient id="goldNeckGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#a07820"/>
+                  <stop offset="25%" stop-color="#d4a843"/>
+                  <stop offset="55%" stop-color="#e8c97a"/>
+                  <stop offset="80%" stop-color="#c9a84c"/>
+                  <stop offset="100%" stop-color="#8a6218"/>
+                </linearGradient>
+                <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="white" stop-opacity=".9"/>
+                  <stop offset="50%" stop-color="#e8e0d5" stop-opacity=".85"/>
+                  <stop offset="100%" stop-color="#d0c8bc" stop-opacity=".8"/>
+                </linearGradient>
+                <linearGradient id="labelGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#fdfaf5" stop-opacity=".96"/>
+                  <stop offset="50%" stop-color="#f5f0e8" stop-opacity=".96"/>
+                  <stop offset="100%" stop-color="#ede5d5" stop-opacity=".96"/>
+                </linearGradient>
+                <linearGradient id="nozzleGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8a6218"/>
+                  <stop offset="50%" stop-color="#d4a843"/>
+                  <stop offset="100%" stop-color="#8a6218"/>
+                </linearGradient>
+                <linearGradient id="shimmerGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="white" stop-opacity="0"/>
+                  <stop offset="40%" stop-color="white" stop-opacity=".18"/>
+                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+                <clipPath id="bottleClip">
+                  <rect x="28" y="90" width="164" height="262" rx="26" ry="26"/>
+                </clipPath>
+              </defs>
+              <!-- Spray nozzle -->
+              <rect x="97" y="40" width="6" height="18" rx="2" fill="url(#nozzleGrad)"/>
+              <rect x="100" y="38" width="20" height="5" rx="2" fill="url(#nozzleGrad)"/>
+              <!-- Cap -->
+              <rect x="72" y="50" width="76" height="42" rx="8" fill="url(#capGrad)" stroke="rgba(201,168,76,.35)" stroke-width=".8"/>
+              <rect x="76" y="53" width="28" height="36" rx="5" fill="white" fill-opacity=".15"/>
+              <rect x="80" y="55" width="14" height="8" rx="3" fill="white" fill-opacity=".3"/>
+              <!-- Gold neck -->
+              <rect x="66" y="88" width="88" height="18" rx="4" fill="url(#goldNeckGrad)"/>
+              <rect x="72" y="88" width="76" height="5" rx="2" fill="rgba(255,255,255,.2)"/>
+              <rect x="60" y="103" width="100" height="6" rx="2" fill="url(#goldNeckGrad)"/>
+              <!-- Bottle body -->
+              <rect x="28" y="90" width="164" height="262" rx="26" fill="url(#liquidGrad)"/>
+              <rect x="28" y="90" width="164" height="262" rx="26" fill="url(#glassOverlay)"/>
+              <rect x="28" y="90" width="164" height="262" rx="26" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/>
+              <rect x="30" y="92" width="160" height="258" rx="24" fill="none" stroke="rgba(201,168,76,.15)" stroke-width=".5"/>
+              <rect x="28" y="90" width="22" height="262" rx="26" fill="white" fill-opacity=".22" clip-path="url(#bottleClip)"/>
+              <rect x="170" y="90" width="22" height="262" rx="26" fill="white" fill-opacity=".12" clip-path="url(#bottleClip)"/>
+              <!-- Label -->
+              <rect x="46" y="116" width="128" height="180" rx="6" fill="url(#labelGrad)"/>
+              <rect x="46" y="116" width="128" height="180" rx="6" fill="none" stroke="#c9a84c" stroke-width="1.2"/>
+              <rect x="51" y="121" width="118" height="170" rx="4" fill="none" stroke="#c9a84c" stroke-width=".5" stroke-opacity=".6"/>
+              <rect x="54" y="124" width="112" height="164" rx="3" fill="none" stroke="#c9a84c" stroke-width=".4" stroke-opacity=".4"/>
+              <!-- Corner ornaments -->
+              <path d="M46 126 L46 116 L56 116" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+              <path d="M46 122 L50 122 L50 118" stroke="#c9a84c" stroke-width=".7" fill="none" stroke-opacity=".6"/>
+              <path d="M174 126 L174 116 L164 116" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+              <path d="M174 122 L170 122 L170 118" stroke="#c9a84c" stroke-width=".7" fill="none" stroke-opacity=".6"/>
+              <path d="M46 286 L46 296 L56 296" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+              <path d="M46 290 L50 290 L50 294" stroke="#c9a84c" stroke-width=".7" fill="none" stroke-opacity=".6"/>
+              <path d="M174 286 L174 296 L164 296" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+              <path d="M174 290 L170 290 L170 294" stroke="#c9a84c" stroke-width=".7" fill="none" stroke-opacity=".6"/>
+              <!-- Top divider -->
+              <line x1="60" y1="135" x2="160" y2="135" stroke="#c9a84c" stroke-width=".5" stroke-opacity=".5"/>
+              <path d="M108 132 L110 135 L112 132" stroke="#c9a84c" stroke-width=".6" fill="none" stroke-opacity=".7"/>
+              <!-- Iris logo -->
+              <image href="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" x="76" y="134" width="68" height="68" preserveAspectRatio="xMidYMid meet"/>
+              <!-- Bottom divider -->
+              <line x1="65" y1="202" x2="155" y2="202" stroke="#c9a84c" stroke-width=".5" stroke-opacity=".4"/>
+              <!-- OSCENTIC text -->
+              <text x="110" y="230" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="600" letter-spacing="5" fill="#0a0a0a" fill-opacity=".9">OSCENTIC</text>
+              <text x="110" y="248" text-anchor="middle" font-family="Inter, sans-serif" font-size="5.5" font-weight="400" letter-spacing="2.5" fill="#0a0a0a" fill-opacity=".55">EAU DE PARFUM</text>
+              <!-- Floral bottom -->
+              <path d="M85 268 Q90 263 95 268 Q100 273 105 268 Q110 263 115 268 Q120 273 125 268 Q130 263 135 268" stroke="#c9a84c" stroke-width=".6" fill="none" stroke-opacity=".45"/>
+              <text x="110" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="5" font-weight="300" letter-spacing="1" fill="#0a0a0a" fill-opacity=".4">50 ml · 1.7 FL. OZ.</text>
+              <!-- Shimmer -->
+              <rect x="28" y="90" width="42" height="262" rx="26" fill="url(#shimmerGrad)" clip-path="url(#bottleClip)" opacity=".6"/>
+              <!-- Reflection -->
+              <ellipse cx="110" cy="352" rx="70" ry="8" fill="rgba(180,140,40,.08)"/>
+            </svg>
+          </div>
+        </div>
+        <p class="bottle-caption">Signature Collection — 50ml</p>
+      </div>
+
+      <!-- Notes panel (xl only) -->
+      <div class="hero-notes" id="hero-notes">
+        <div class="note-row">
+          <p class="note-label">Top Notes</p>
+          <p class="note-value">Bergamot · Neroli · Cardamom</p>
+        </div>
+        <div class="note-row">
+          <p class="note-label">Heart Notes</p>
+          <p class="note-value">Iris · Rose de Mai · Jasmine</p>
+        </div>
+        <div class="note-row">
+          <p class="note-label">Base Notes</p>
+          <p class="note-value">Amber · Sandalwood · Vetiver</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ COLLECTION -->
+<section id="collection">
+  <div class="collection-inner">
+    <div class="section-header animate-on-scroll">
+      <p class="section-label" style="margin-bottom:20px">The Collection</p>
+      <h2 class="section-title">Olfactory Portraits</h2>
+      <div class="divider-gold"></div>
+      <p class="section-desc">
+        Three distinct compositions, each an intimate dialogue between rare
+        botanical essences and the art of the perfumer.
+      </p>
+    </div>
+    <div class="products-grid" id="products-grid">
+      <!-- Rendered by script.js -->
+    </div>
+    <div class="collection-footer animate-on-scroll">
+      <button class="btn-gold">
+        <span style="display:flex;align-items:center;gap:12px">
+          View Full Collection
+          <span style="color:var(--gold-400)">→</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ SCENT FINDER -->
+<section id="scent-finder">
+  <div class="finder-bg-glow" aria-hidden="true"></div>
+
+  <!-- Art deco corners -->
+  <div class="deco-corner tl" aria-hidden="true">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M0 40 L0 0 L40 0" stroke="#c9a84c" stroke-width="1"/>
+      <path d="M8 40 L8 8 L40 8" stroke="#c9a84c" stroke-width=".5"/>
+    </svg>
+  </div>
+  <div class="deco-corner tr" aria-hidden="true">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M60 40 L60 0 L20 0" stroke="#c9a84c" stroke-width="1"/>
+      <path d="M52 40 L52 8 L20 8" stroke="#c9a84c" stroke-width=".5"/>
+    </svg>
+  </div>
+  <div class="deco-corner bl" aria-hidden="true">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M0 20 L0 60 L40 60" stroke="#c9a84c" stroke-width="1"/>
+      <path d="M8 20 L8 52 L40 52" stroke="#c9a84c" stroke-width=".5"/>
+    </svg>
+  </div>
+  <div class="deco-corner br" aria-hidden="true">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M60 20 L60 60 L20 60" stroke="#c9a84c" stroke-width="1"/>
+      <path d="M52 20 L52 52 L20 52" stroke="#c9a84c" stroke-width=".5"/>
+    </svg>
+  </div>
+
+  <div class="finder-inner">
+    <div class="finder-header">
+      <div class="finder-logo">
+        <img src="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" alt="OSCENTIC"/>
+      </div>
+      <p class="section-label" style="margin-bottom:20px">Scent Finder</p>
+      <h2 class="finder-title">Discover Your <em>Essence</em></h2>
+      <div class="finder-divider"></div>
+      <p class="finder-desc">Answer three questions. We'll reveal the OSCENTIC fragrance that was made for you.</p>
+    </div>
+
+    <div class="quiz-box">
+      <div class="quiz-progress" id="quiz-progress">
+        <div class="quiz-dots" id="quiz-dots"></div>
+        <span class="quiz-step-text" id="quiz-step-text">1 / 3</span>
+      </div>
+      <div class="quiz-content" id="quiz-content">
+        <!-- Rendered by script.js -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ ATELIER -->
+<section id="atelier">
+  <!-- Part 1: Story -->
+  <div class="atelier-story">
+    <div class="atelier-inner">
+      <div class="atelier-grid">
+        <!-- Decorative panel -->
+        <div class="atelier-panel animate-on-scroll">
+          <div class="atelier-panel-box">
+            <div class="atelier-panel-inset-1"></div>
+            <div class="atelier-panel-inset-2"></div>
+            <!-- Corner ornaments -->
+            <div class="atelier-corner" style="top:16px;left:16px">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M0 18 L0 0 L18 0" stroke="#c9a84c" stroke-width="1.2"/>
+                <path d="M4 18 L4 4 L18 4" stroke="#c9a84c" stroke-width=".5" opacity=".5"/>
+              </svg>
+            </div>
+            <div class="atelier-corner" style="top:16px;right:16px;transform:rotate(90deg)">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M0 18 L0 0 L18 0" stroke="#c9a84c" stroke-width="1.2"/>
+                <path d="M4 18 L4 4 L18 4" stroke="#c9a84c" stroke-width=".5" opacity=".5"/>
+              </svg>
+            </div>
+            <div class="atelier-corner" style="bottom:16px;left:16px;transform:rotate(-90deg)">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M0 18 L0 0 L18 0" stroke="#c9a84c" stroke-width="1.2"/>
+                <path d="M4 18 L4 4 L18 4" stroke="#c9a84c" stroke-width=".5" opacity=".5"/>
+              </svg>
+            </div>
+            <div class="atelier-corner" style="bottom:16px;right:16px;transform:rotate(180deg)">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M0 18 L0 0 L18 0" stroke="#c9a84c" stroke-width="1.2"/>
+                <path d="M4 18 L4 4 L18 4" stroke="#c9a84c" stroke-width=".5" opacity=".5"/>
+              </svg>
+            </div>
+            <div class="atelier-panel-center">
+              <div class="atelier-panel-logo">
+                <img src="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" alt="OSCENTIC"/>
+              </div>
+              <p class="atelier-panel-name">OSCENTIC</p>
+              <div class="atelier-panel-line"></div>
+              <p class="atelier-panel-maison">Maison de Parfum</p>
+              <p class="atelier-panel-city">Paris · Est. MMXXIV</p>
+              <div class="atelier-panel-deco">
+                <div class="atelier-panel-deco-line"></div>
+                <span class="atelier-panel-diamond">◇</span>
+                <div class="atelier-panel-deco-line"></div>
+              </div>
+              <p class="atelier-panel-quote">"To wear a fragrance<br>is to wear a memory<br>not yet made."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story text -->
+        <div class="atelier-text animate-on-scroll">
+          <p class="section-label" style="margin-bottom:20px">The Atelier</p>
+          <h2 class="atelier-h2">A House Built<br>on <em>Devotion</em></h2>
+          <div class="atelier-divider"></div>
+          <div class="atelier-body">
+            <p>OSCENTIC was founded on a single conviction: that the highest form of luxury is something felt, not merely observed. In an industry saturated with celebrity collaborations and synthetic shortcuts, we chose the harder path — the ancient path.</p>
+            <p>Our Parisian atelier occupies a 19th-century building in the 6th arrondissement, its stone walls still fragrant with decades of maceration. Here, three master perfumers practice their craft with the quiet intensity of virtuoso musicians.</p>
+            <p>Every OSCENTIC fragrance requires a minimum of eighteen months from first concept to final formula. We do not rush. We do not compromise. We believe that true luxury is the product of extraordinary patience.</p>
+          </div>
+          <div style="margin-top:40px">
+            <a href="#collection" class="btn-dark">Explore the Collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part 2: Pillars -->
+  <div class="atelier-pillars">
+    <div class="pillars-inner">
+      <div class="pillars-header animate-on-scroll">
+        <p class="section-label" style="margin-bottom:20px">Our Philosophy</p>
+        <h2 class="pillars-title">The Three Pillars of Craft</h2>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar animate-on-scroll">
+          <p class="pillar-num">01</p>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">The Botanist's Archive</h3>
+          <p class="pillar-body">We source from a curated network of family-owned distilleries — iris fields in Tuscany, rose farms in Grasse, wild oud harvesters in Cambodia. Every ingredient is chosen with the obsession of a collector.</p>
+        </div>
+        <div class="pillar animate-on-scroll" style="transition-delay:100ms">
+          <p class="pillar-num">02</p>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">The Perfumer's Hand</h3>
+          <p class="pillar-body">Our master perfumers work in silence, guided only by instinct and memory. No algorithmic shortcuts. No trend forecasting. Each formula is composed across seasons, refined across years.</p>
+        </div>
+        <div class="pillar animate-on-scroll" style="transition-delay:200ms">
+          <p class="pillar-num">03</p>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">The Alchemist's Studio</h3>
+          <p class="pillar-body">Maceration, distillation, absolute extraction — the ancient arts practiced to exacting modern standards. Our Paris atelier is both laboratory and sanctum, where patience is the primary ingredient.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part 3: Quote -->
+  <div class="atelier-quote-section">
+    <div class="atelier-quote-inner animate-on-scroll">
+      <div class="quote-ornament">
+        <div class="quote-line left"></div>
+        <div class="quote-logo">
+          <img src="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" alt="OSCENTIC"/>
+        </div>
+        <div class="quote-line right"></div>
+      </div>
+      <blockquote class="atelier-blockquote">
+        "We do not create fragrances.<br>
+        <span>We compose memories</span><br>
+        you haven't lived yet."
+      </blockquote>
+      <cite class="atelier-cite">— Maison OSCENTIC, Paris</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-topline"></div>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" alt="OSCENTIC"/>
+          <span class="footer-brand-name">OSCENTIC</span>
+        </div>
+        <p class="footer-brand-desc">
+          A Parisian maison dedicated to the ancient art of fine perfumery.
+          Every drop tells a story of rare botanicals, master craftsmanship,
+          and uncompromising devotion to excellence.
+        </p>
+        <p class="footer-newsletter-label">Join the Circle</p>
+        <div class="footer-email-row">
+          <input type="email" class="footer-email-input" placeholder="Your email address"/>
+          <button class="footer-email-btn">Join</button>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Collections</p>
+        <ul class="footer-col-list">
+          <li><a href="#">Signature Line</a></li>
+          <li><a href="#">Seasonal Editions</a></li>
+          <li><a href="#">Limited Editions</a></li>
+          <li><a href="#">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">The House</p>
+        <ul class="footer-col-list">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">The Atelier</a></li>
+          <li><a href="#">Ingredients</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-col-list">
+          <li><a href="#">Bespoke Consultation</a></li>
+          <li><a href="#">Gift Wrapping</a></li>
+          <li><a href="#">Fragrance Engraving</a></li>
+          <li><a href="#">Corporate Gifting</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-col-list">
+          <li><a href="#">Paris Boutique</a></li>
+          <li><a href="#">Online Boutique</a></li>
+          <li><a href="#">Press Inquiries</a></li>
+          <li><a href="#">Wholesale</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-divider">
+      <div class="footer-divider-line"></div>
+      <div class="footer-divider-syms">
+        <span class="footer-divider-sym">◇</span>
+        <span class="footer-divider-sym">◈</span>
+        <span class="footer-divider-sym">◇</span>
+      </div>
+      <div class="footer-divider-line"></div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Maison OSCENTIC. All rights reserved. Paris, France.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════ CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-drawer" id="cart-drawer" role="dialog" aria-label="Shopping Cart">
+  <div class="cart-head">
+    <div class="cart-head-left">
+      <img src="../logo/Gemini_Generated_Image_3geh913geh913geh-removebg-preview.png" alt="OSCENTIC"/>
+      <div>
+        <p class="cart-head-title">Your Selection</p>
+        <p class="cart-head-count" id="cart-head-count">0 items</p>
+      </div>
+    </div>
+    <button class="cart-close" id="cart-close-btn" aria-label="Close cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cart-items-list">
+    <div class="cart-empty">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <p class="cart-empty-title">Your cart is empty</p>
+      <p class="cart-empty-sub">Discover our collection</p>
+    </div>
+  </div>
+  <div class="cart-foot" id="cart-foot" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cart-total">EGP 0</span>
+    </div>
+    <button class="cart-checkout">Proceed to Checkout</button>
+    <p class="cart-shipping">Complimentary shipping · Luxury packaging</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
